@@ -101,5 +101,27 @@ public class ExampleArrayList {
         myIntegerArrayList.remove(2);
         System.out.println("The value of the third element is: " + myIntegerArrayList.get(2));
         System.out.println("The size of the array after removing the third element: " + myIntegerArrayList.size());
+
+        // Try inserting something in a negative index.
+        // Result: gives me an IndexOutOfBoundsException, as it should.
+//        System.out.println("Trying to add something to a negative index.");
+//        myIntegerArrayList.add(-1, 99);
+
+        // Try to insert something in a positive index, try to override it with another value (does it shift it, replace it?)
+        // Result: it just replaces the value at that index.
+        System.out.println("Trying to add something to a positive index to evaluate behavior.");
+        System.out.println("What the array currently looks like: " + myIntegerArrayList);
+        myIntegerArrayList.set(0, 25);
+        System.out.println("What the array currently looks like: " + myIntegerArrayList);
+        myIntegerArrayList.set(0, 87);
+        System.out.println("What the array currently looks like: " + myIntegerArrayList);
+
+        // Try to create an ArrayList with a negative size
+        // Uh - not sure.
+        System.out.println("Trying to create an Arraylist with a negative size.");
+        ArrayList myStringArrayList = new ArrayList(-4);
+        System.out.println("The ArrayList contains this: " + myStringArrayList);
+        System.out.println("The ending size of the array: " + myStringArrayList.size());
+
     }
 }
