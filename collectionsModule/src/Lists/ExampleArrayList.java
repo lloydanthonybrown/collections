@@ -104,8 +104,14 @@ public class ExampleArrayList {
 
         // Try inserting something in a negative index.
         // Result: gives me an IndexOutOfBoundsException, as it should.
-//        System.out.println("Trying to add something to a negative index.");
-//        myIntegerArrayList.add(-1, 99);
+        System.out.println("Trying to add something to a negative index.");
+        try {
+            myIntegerArrayList.add(-1, 99);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            System.out.println("You can't add an integer to an index that doesn't exist.");
+        }
 
         // Try to insert something in a positive index, try to override it with another value (does it shift it, replace it?)
         // Result: it just replaces the value at that index.
@@ -119,9 +125,14 @@ public class ExampleArrayList {
         // Try to create an ArrayList with a negative size
         // Uh - not sure.
         System.out.println("Trying to create an Arraylist with a negative size.");
-        ArrayList myStringArrayList = new ArrayList(-4);
-        System.out.println("The ArrayList contains this: " + myStringArrayList);
-        System.out.println("The ending size of the array: " + myStringArrayList.size());
+        try{
+            ArrayList myStringArrayList = new ArrayList(-4);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            System.out.println("The ArrayList contains this: " + myStringArrayList);
+            System.out.println("The ending size of the array: " + myStringArrayList.size());
+        }
 
     }
 }

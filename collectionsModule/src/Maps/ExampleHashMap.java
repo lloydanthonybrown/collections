@@ -17,7 +17,22 @@ public class ExampleHashMap {
         myHashMap.put("Nathan Brown" , "26 years old");
         myHashMap.put("Greg Brown"   , "26 years old");
 
+        System.out.println("The current contents of the hashmap are: " + myHashMap);
 
+//        for (int i = 0; i < myHashMap.size(); i++)
+
+        for (Map.Entry<KeyType, ValueType> entry : map.entrySet()) {
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+
+        for (Map.Entry : myHashMap.entrySet())
+
+        try{
+
+        }
+        catch (Exception e){
+
+        }
 
     }
 }
