@@ -125,14 +125,15 @@ public class ExampleArrayList {
         // Try to create an ArrayList with a negative size
         // Uh - not sure.
         System.out.println("Trying to create an Arraylist with a negative size.");
-        try{
-            ArrayList myStringArrayList = new ArrayList(-4);
-        }
-        catch (Exception e){
-            e.printStackTrace();
-            System.out.println("The ArrayList contains this: " + myStringArrayList);
-            System.out.println("The ending size of the array: " + myStringArrayList.size());
-        }
+//        try{
+//            ArrayList myStringArrayList = new ArrayList(-4);
+//        }
+//        catch (Exception e){
+//            e.printStackTrace();
+        // This gives me errors, saying that it can't access the myStringArrayList in the try block, for some reason.
+//            System.out.println("The ArrayList contains this: " + myStringArrayList);
+//            System.out.println("The ending size of the array: " + myStringArrayList.size());
+//        }
 
     }
 }
